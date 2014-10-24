@@ -98,6 +98,18 @@ $(document).ready(function() {
         })
         .attr("r", "3");
 
+    var circleShadow = container.append("svg:g").selectAll("circle")
+        .data([
+            {}, {}, {}
+        ])
+        .enter().append("circle")
+        .attr("transform", function(d) {
+            return AXES.setPosition(0, 0);
+        })
+        .attr("r", function (d, i) {
+            return 3 - i;
+        });
+
     var text = container.append("svg:g").selectAll("text")
         .data([
             {}
@@ -146,29 +158,52 @@ function computeXY(xy) {
     content += "\nRANGE = [0, 1]";
     $("#inputData").val(content);
 
-    var interval = null;
+    var intervals = [];
     $(".btn.start").on("click", function () {
-        clearInterval(interval);
+
+        for (var i in intervals) {
+            clearInterval(intervals[i]);
+        }
+
         try {
             eval($("#inputData").val());
         } catch (e) {
             alert(e.message);
             return;
         }
-        var T = RANGE[0];
-        interval = setInterval(function () {
-            var xy = getXY(T);
+        var values = [];
+        for (var t = RANGE[0]; t < RANGE[1]; t += 0.001) {
+            var xy = getXY(t);
             if (typeof computeXY === "function") {
                 computeXY(xy);
             }
-            text.text("x = " + xy.x.toFixed(2) + ", y = " + xy.y.toFixed(2));
-            AXES.setPosition(xy.x, xy.y, circle);
-            if (T <= RANGE[1]) {
-                T += 0.001;
-            } else {
-                clearInterval(i);
+            values.push(xy);
+        }
+
+        var howMany = 4;
+        var cHowMany = 0;
+        var tmp = setInterval(function () {
+
+            if (++cHowMany >= howMany) {
+                clearInterval(tmp);
             }
-        }, 0.1);
+
+            var i = -1;
+            var cInterval = null;
+            var cCircle = d3.select(circleShadow[0][cHowMany - 2]);
+            if (cHowMany === 1) {
+                cCircle = circle;
+            }
+            intervals.push(cInterval = setInterval(function () {
+                var xy = null;
+                if (!(xy = values[++i])) {
+                    return clearInterval(cInterval);
+                }
+
+                text.text("x = " + xy.x.toFixed(2) + ", y = " + xy.y.toFixed(2));
+                AXES.setPosition(xy.x, xy.y, cCircle);
+            }, 0.1));
+        }, 100);
     });
 
 
