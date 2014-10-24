@@ -1,0 +1,25 @@
+{
+  "name": "vectorial-spaces",
+  "version": "1.0.0",
+  "description": "Create animations for vector decomposition in intermediar bases.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/vectorial-spaces.git"
+  },
+  "keywords": [
+    "vectorial",
+    "spaces",
+    "vectors",
+    "animations"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/vectorial-spaces/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/vectorial-spaces"
+}
