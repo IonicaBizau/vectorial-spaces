@@ -19,7 +19,7 @@ $(document).ready(function() {
             return (AXES.x1.x2 - AXES.x1.x1) / 2 + x;
         },
         y: function (y) {
-            return AXES.x2.y2 * 3 + (AXES.x2.y1 - AXES.x2.y2) / 2 - y;
+            return AXES.x2.y2 - 10 + (AXES.x2.y1 - AXES.x2.y2) / 2 - y;
         },
         setPosition: function (x, y, el) {
             var tr = "translate(" + AXES.x(x) + "," + AXES.y(y) + ")";
@@ -30,6 +30,7 @@ $(document).ready(function() {
         }
     };
     AXES.x2.x1 = AXES.x2.x2 = (AXES.x1.x2 - AXES.x1.x1) / 2;
+    AXES.x1.y1 = AXES.x1.y2 = (AXES.x2.y1 - AXES.x2.y2) / 2;
 
     var svg = d3.select(".graph").append("svg:svg")
         .attr("width", width)
