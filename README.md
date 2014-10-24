@@ -2,7 +2,7 @@
 Create animations for vector decomposition in intermediar bases.
 
 ## Online
-You can [open and see the project online, hosted on GitHub pages](https://github.com/IonicaBizau/vectorial-spaces").
+You can [open and see the project online, hosted on GitHub pages](https://github.com/IonicaBizau/vectorial-spaces).
 
 ## Installation
 Run the following commands to download and run the application:
