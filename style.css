@@ -1,0 +1,57 @@
+@import url("./bs/css/bootstrap.css");
+ html,
+body,
+.main-container,
+.main-container > .row,
+.sidebar {
+    height: 100%;
+}
+.sidebar {
+    background: #f8f8f8;
+    box-shadow: 2px 0 5px rgba(171, 171, 171, 0.34);
+}
+body {
+    background-image: url(./images/pattern_tile.png);
+    padding-top: 50px;
+}
+.main-container > .row > .col-lg-10 {
+    padding-left: 0;
+}
+line {
+    transition: 0.7s;
+}
+g {
+    transition: 0.7s;
+}
+line.link {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1.5px;
+}
+marker#arrow {
+    fill: #666;
+}
+line.link.arrow {
+    stroke: rgb(204, 204, 204);
+}
+line.link.resolved {
+    stroke-dasharray: 0, 2 1;
+}
+
+text {
+    font: 10px"Monaco", monospace;
+    fill: black;
+}
+
+.input-things {
+    position: absolute;
+    width: 220px;
+    font-family: "Monaco", monospace;
+    bottom: 10px;
+    left: 10px;
+}
+
+.input-things textarea {
+    margin-top: 10px;
+    width: 500px;
+}
