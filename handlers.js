@@ -96,11 +96,14 @@ $(document).ready(function() {
         .attr("transform", function(d) {
             return AXES.setPosition(0, 0);
         })
-        .attr("r", "3");
+        .attr("r", "4")
+        .attr("fill", "#c0392b");
 
     var circleShadow = container.append("svg:g").selectAll("circle")
         .data([
-            {}, {}, {}
+            {
+
+            }, {}, {}
         ])
         .enter().append("circle")
         .attr("transform", function(d) {
