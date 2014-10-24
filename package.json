@@ -2,7 +2,7 @@
   "name": "vectorial-spaces",
   "version": "1.0.0",
   "description": "Create animations for vector decomposition in intermediar bases.",
-  "main": "index.html",
+  "main": "handlers.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
