@@ -135,7 +135,7 @@ $(document).ready(function() {
 
     W = [10, -10];
 
-function getBx(t) {
+window.getBx = function(t) {
     return [
         [
             (1 - t) * B1[0][0] + t * B2[0][0],
@@ -148,7 +148,7 @@ function getBx(t) {
     ]
 }
 
-function computeXY(xy) {
+window.computeXY = function(xy) {
     xy.x *= 10;
     xy.y *= 10;
 }
@@ -156,8 +156,8 @@ function computeXY(xy) {
     var content = "B1 = " + JSON.stringify(B1);
     content += "\nB2 = " + JSON.stringify(B2);
     content += "\nW = " + JSON.stringify(W);
-    content += "\n" + getBx.toString();
-    content += "\n" + computeXY.toString();
+    content += "\ngetBx = " + getBx.toString();
+    content += "\ncomputeXY = " + computeXY.toString();
     content += "\nRANGE = [0, 1]";
     $("#inputData").val(content);
 
@@ -212,16 +212,7 @@ function computeXY(xy) {
 
     function getXY(t) {
 
-        i = getBx(t);
-
-        // (1, 1), (0, 2) => w = (3 * 1 + 3 * 0,
-        // (1, 0), (0, 1) => w = (3 * 1 + 3 * 0,
-
-        // (3, 0) + (0, 5)
-        //
-        //
-        // (x * i[0][0] + y * i[1][0],
-        //  x * i[][0] + y * i[1][1]
+        var g = getBx(t);
 
         // x * i[0][0] + x * i[1][0] = W[0]
         // y * i[0][1] + y * i[1][1] = W[1]
@@ -230,11 +221,11 @@ function computeXY(xy) {
 
         // x * i[0][0] + y * i[1][0] = W[0]
         // x * i[0][1] + y * i[1][1] = W[1]
-        console.log("x * " + i[0][0] + " + y * " + i[1][0]  + " = " + W[0]);
-        console.log("x * " + i[0][1] + " + y * " + i[1][1]  + " = " + W[1]);
-        var dm = i[0][0] * i[1][1] - i[0][1] * i[1][0];
-        var x = (W[0] * i[1][1] - W[1] * i[1][0]) / dm;
-        var y = (i[0][0] * W[1] - i[0][1] * W[0]) / dm;
+        console.log("x * " + g[0][0] + " + y * " + g[1][0]  + " = " + W[0]);
+        console.log("x * " + g[0][1] + " + y * " + g[1][1]  + " = " + W[1]);
+        var dm = g[0][0] * g[1][1] - g[0][1] * g[1][0];
+        var x = (W[0] * g[1][1] - W[1] * g[1][0]) / dm;
+        var y = (g[0][0] * W[1] - g[0][1] * W[0]) / dm;
 
         return {
             x: x,
