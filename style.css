@@ -56,3 +56,29 @@ text {
     width: 500px;
     font-size: 10px;
 }
+
+.copyright {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+@-webkit-keyframes pulse_animation {
+    0% { -webkit-transform: scale(1); }
+    16% { -webkit-transform: scale(1); }
+    33% { -webkit-transform: scale(1.6); }
+
+    50% { -webkit-transform: scale(1); }
+    66% { -webkit-transform: scale(1); }
+    83% { -webkit-transform: scale(1.6); }
+}
+
+
+.pulse {
+    -webkit-animation-name: 'pulse_animation';
+    -webkit-animation-duration: 1500ms;
+    -webkit-transform-origin: 50% 60%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}

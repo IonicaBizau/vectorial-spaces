@@ -3,7 +3,7 @@ $(document).ready(function() {
     var $graph = $(".graph");
     var $mainContainer = $(".main-container");
     var width = $mainContainer.outerWidth();
-    var height = $mainContainer.outerHeight();
+    var height = $mainContainer.outerHeight() - 10;
     var AXES = {
         x1: {
             x1: 10,
