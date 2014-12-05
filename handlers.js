@@ -121,7 +121,7 @@ $(document).ready(function() {
         .attr({
             x: 10
           , y: 10
-        }).text("Hello World");
+        }).text("x = 0, y = 0");
 
 
     B1 = [
