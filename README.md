@@ -4,6 +4,22 @@ Create animations for vector decomposition in intermediar bases.
 ## Online
 You can [open and see the project online, hosted on GitHub pages](https://github.com/IonicaBizau/vectorial-spaces).
 
+## Example
+
+> *B<sub>1</sub> = { u<sub>1</sub> = (1, 1), u<sub>2</sub> = (0, 2)}*
+
+> *B<sub>2</sub> = { e<sub>1</sub> = (1, 0), e<sub>2</sub> = (0, 1)}*
+
+> *v = (3, 5)*
+
+The point represented in the two bases is:
+
+> *v = 3u<sub>1</sub> + 1u<sub>2</sub> = (3, 3) + (0, 2) = (3, 5)*
+
+> *v = 3e<sub>1</sub> + 5e<sub>2</sub> = (3, 0) + (0, 5) = (3, 5)*
+
+![](http://i.imgur.com/yp6wuBY.png)
+
 ## Installation
 Run the following commands to download and run the application:
 
