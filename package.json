@@ -1,6 +1,6 @@
 {
   "name": "vectorial-spaces",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Create animations for vector decomposition in intermediar bases.",
   "main": "handlers.js",
   "scripts": {
@@ -16,10 +16,32 @@
     "vectors",
     "animations"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net/)",
-  "license": "MIT",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/vectorial-spaces/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/vectorial-spaces"
+  "homepage": "https://github.com/IonicaBizau/vectorial-spaces",
+  "blah": {
+    "description": "You can [open and see the project online, hosted on GitHub pages](https://github.com/IonicaBizau/vectorial-spaces).",
+    "ex_img": "http://i.imgur.com/yp6wuBY.png",
+    "example": [
+      {
+        "blockquote": [
+          "*B<sub>1</sub> = { u<sub>1</sub> = (1, 1), u<sub>2</sub> = (0, 2)}*",
+          "*B<sub>2</sub> = { e<sub>1</sub> = (1, 0), e<sub>2</sub> = (0, 1)}*",
+          "*v = (3, 5)*"
+        ]
+      },
+      {
+        "p": "The point represented in the two bases is:"
+      },
+      {
+        "blockquote": [
+          "*v = 3u<sub>1</sub> + 1u<sub>2</sub> = (3, 3) + (0, 2) = (3, 5)*",
+          "*v = 3e<sub>1</sub> + 5e<sub>2</sub> = (3, 0) + (0, 5) = (3, 5)*"
+        ]
+      }
+    ]
+  }
 }
