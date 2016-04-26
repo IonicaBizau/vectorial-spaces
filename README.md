@@ -1,3 +1,4 @@
+
 # vectorial-spaces [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/vectorial-spaces.svg)](https://www.npmjs.com/package/vectorial-spaces) [![Downloads](https://img.shields.io/npm/dt/vectorial-spaces.svg)](https://www.npmjs.com/package/vectorial-spaces) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Create animations for vector decomposition in intermediar bases.
@@ -10,15 +11,18 @@ You can [open and see the project online, hosted on GitHub pages](https://github
 > *B<sub>2</sub> = { e<sub>1</sub> = (1, 0), e<sub>2</sub> = (0, 1)}*
 > *v = (3, 5)*
 
+
 The point represented in the two bases is:
 
 > *v = 3u<sub>1</sub> + 1u<sub>2</sub> = (3, 3) + (0, 2) = (3, 5)*
 > *v = 3e<sub>1</sub> + 5e<sub>2</sub> = (3, 0) + (0, 5) = (3, 5)*
 
-## How to contribute
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## License
+
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
